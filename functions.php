@@ -140,14 +140,12 @@ add_action( 'widgets_init', 'onlinery_store_widgets_init' );
  * Enqueue scripts and styles.
  */
 function onlinery_store_scripts() {
+	/** Tailwind CSS */
+	wp_enqueue_style( 'onlinery-store-tailwind', get_stylesheet_directory_uri().'/tailwind.css', array(), ONLINERY_STORE_VERSION );
+	/** Theme CSS */
 	wp_enqueue_style( 'onlinery-store-style', get_stylesheet_uri(), array(), ONLINERY_STORE_VERSION );
 	wp_style_add_data( 'onlinery-store-style', 'rtl', 'replace' );
 
-	/**
-	 * Tailwind CSS
-	 * Tailwind CSS for this theme
-	 */
-	wp_enqueue_style( 'onlinery-store-tailwind', get_stylesheet_uri(), array(), ONLINERY_STORE_VERSION );
 
 	wp_enqueue_script( 'onlinery-store-navigation', get_template_directory_uri() . '/js/navigation.js', array(), ONLINERY_STORE_VERSION, true );
 
@@ -190,3 +188,27 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Load FontAwesome
+ */
+require_once __DIR__ . '/vendor/fortawesome/wordpress-fontawesome/index.php';
+use function FortAwesome\fa;
+/** on activated theme */
+add_action('after_switch_theme', 'FortAwesome\FontAwesome_Loader::initialize');
+add_action(
+    'font_awesome_preferences',
+    function() {
+        fa()->register(
+            array(
+                'name' => 'onlinery store'
+                // other preferences would be registered here
+            )
+        );
+    }
+);
+/** on deactivated theme */
+add_action('switch_theme', function() {
+	FortAwesome\FontAwesome_Loader::maybe_deactivate();
+	FortAwesome\FontAwesome_Loader::maybe_uninstall();
+});

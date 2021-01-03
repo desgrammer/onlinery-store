@@ -5,6 +5,7 @@ module.exports = {
       ],
     darkMode: 'class', // or 'media' or 'class'
     theme: {
+        fontFamily: false,
         extend: {},
     },
     variants: {},

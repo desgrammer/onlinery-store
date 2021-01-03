@@ -47,6 +47,7 @@
     "compile:tailwind": "postcss tailwind/tailwind.css -o tailwind.css"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "autoprefixer": "^10.1.0",
     "tailwindcss": "^2.0.2"
   }

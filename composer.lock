@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f671a0a4d931cbb68914e942f0c95e8e",
-    "packages": [],
+    "content-hash": "489483b677c69817366e05bbe318343c",
+    "packages": [
+        {
+            "name": "fortawesome/wordpress-fontawesome",
+            "version": "4.0.0-rc21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/wordpress-fontawesome.git",
+                "reference": "fae49cfb5590d19593ef4dfed2b267bda6109ac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/wordpress-fontawesome/zipball/fae49cfb5590d19593ef4dfed2b267bda6109ac0",
+                "reference": "fae49cfb5590d19593ef4dfed2b267bda6109ac0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "doctrine/annotations": "^1.11.1",
+                "doctrine/instantiator": "^1.3.1",
+                "doctrine/lexer": "^1.2.1",
+                "phpdocumentor/phpdocumentor": "^3.0.0",
+                "phpunit/phpunit": "^7.4.5",
+                "squizlabs/php_codesniffer": "^3.5.8",
+                "wp-coding-standards/wpcs": "^2.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Wilkerson",
+                    "email": "mwlkerson@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Official Font Awesome WordPress plugin composer package.",
+            "homepage": "https://fontawesome.com",
+            "keywords": [
+                "font awesome",
+                "font-awesome",
+                "icon",
+                "icons",
+                "svg",
+                "webfont"
+            ],
+            "support": {
+                "email": "hello@fontawesome.com",
+                "issues": "https://github.com/FortAwesome/wordpress-fontawesome/issues",
+                "source": "https://github.com/FortAwesome/wordpress-fontawesome/tree/4.0.0-rc21"
+            },
+            "time": "2020-11-13T00:09:19+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -1067,9 +1121,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "fortawesome/wordpress-fontawesome": 5
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.6"

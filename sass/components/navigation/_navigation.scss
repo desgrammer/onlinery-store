@@ -54,12 +54,21 @@
 
 		&:hover > a,
 		&.focus > a {
+			border-radius: 0.375rem;
+			border-width: 2px;
+			outline: none;
+			background-color: #fff;
+			border-color: #e5e7eb;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		padding: 0.5rem 1rem;
+		border-width: 2px;
+		border-color: #ecfdf5;
+		transition: all 0.3s ease;
 	}
 
 	.current_page_item > a,
