@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<div class="flex px-16 py-7 container mx-auto">
-			<div class="onl-content-area w-3/4 pr-10">
+			<div class="onl-content-area flex-grow pr-10">
 				<?php
 				if ( have_posts() ) :
 

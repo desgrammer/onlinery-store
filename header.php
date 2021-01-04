@@ -39,7 +39,7 @@
 				$onlinery_store_description = get_bloginfo( 'description', 'display' );
 				if ( $onlinery_store_description || is_customize_preview() ) :
 					?>
-					<p class="site-description text-xs text-green-400"><?php echo $onlinery_store_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<p class="site-description text-xs text-green-400 font-semibold"><?php echo $onlinery_store_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 			<div class="site-search flex-1 self-center justify-self-center">
