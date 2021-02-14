@@ -192,26 +192,26 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Load FontAwesome
  */
-require_once __DIR__ . '/vendor/fortawesome/wordpress-fontawesome/index.php';
-use function FortAwesome\fa;
+// require_once __DIR__ . '/vendor/fortawesome/wordpress-fontawesome/index.php';
+// use function FortAwesome\fa;
 /** on activated theme */
-add_action('after_switch_theme', 'FortAwesome\FontAwesome_Loader::initialize');
-add_action(
-    'font_awesome_preferences',
-    function() {
-        fa()->register(
-            array(
-                'name' => 'onlinery store'
-                // other preferences would be registered here
-            )
-        );
-    }
-);
+// add_action('after_switch_theme', 'FortAwesome\FontAwesome_Loader::initialize');
+// add_action(
+//     'font_awesome_preferences',
+//     function() {
+//         fa()->register(
+//             array(
+//                 'name' => 'onlinery store'
+//                 // other preferences would be registered here
+//             )
+//         );
+//     }
+// );
 /** on deactivated theme */
-add_action('switch_theme', function() {
-	FortAwesome\FontAwesome_Loader::maybe_deactivate();
-	FortAwesome\FontAwesome_Loader::maybe_uninstall();
-});
+// add_action('switch_theme', function() {
+// 	FortAwesome\FontAwesome_Loader::maybe_deactivate();
+// 	FortAwesome\FontAwesome_Loader::maybe_uninstall();
+// });
 
 /**
  * Remove field in WordPress comments
